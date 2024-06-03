@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Planner with ChatGPT</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Goal Planner with ChatGPT</h1>
+        <form method="POST" name="goalForm">
+            <input type="text" name="goal_input" placeholder="Enter your goal">
+            <button type="submit">Generate Plan</button>
+            <div id="planContainer"></div>
+            <div id="systemsContainer"></div>
+    </form>
+</div>
+        <br>
+        <br>
+        <center>
+            {% if plan %} 
+            <div class="container">
+            <!-- <h1>Your Plan to {{goal}}</h1> -->
+
+            {{ plan | safe }}
+
+            <h4>Can I share some tools that might be helpful?</h4>
+            <button type="submit" style="height:30px;width:40px">Yes</button>
+            <button type="submit" style="height:30px;width:40px">No</button>
+            </div>
+            {% endif %} 
+            
+        </center>
+
+</body>
+</html>

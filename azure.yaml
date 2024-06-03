@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: productivity_app
+metadata:
+    template: azd-init@1.8.2
+services:
+    productivity_app:
+        project: .
+        host: containerapp
+        language: python
