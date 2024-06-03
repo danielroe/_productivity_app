@@ -69,7 +69,7 @@ jobs:
 
       - name: Provision Infrastructure
         run: azd provision --no-prompt
-        env:
+        # env:
          #  # uncomment this if you are using infrastructure parameters
          #  AZD_INITIAL_ENVIRONMENT_CONFIG: ${{ secrets.AZD_INITIAL_ENVIRONMENT_CONFIG }}
          ## Define the additional variables or secrets that are required only for provision 
@@ -78,7 +78,7 @@ jobs:
 
       - name: Deploy Application
         run: azd deploy --no-prompt
-        env:
+        # env:
          ## Define the additional variables or secrets that are required only for deploy
          #  ADDITIONAL_VARIABLE_PLACEHOLDER: ${{ variables.ADDITIONAL_VARIABLE_PLACEHOLDER }}
          #  ADDITIONAL_SECRET_PLACEHOLDER: ${{ secrets.ADDITIONAL_SECRET_PLACEHOLDER }}
